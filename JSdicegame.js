@@ -12,8 +12,12 @@
 // alert("Yay! You made it to the final obstacle. All you have to do is successfully walk across the beam. To do this, roll greater than 8 on a twelve-sided dice.");
 // obstacleSixBalanceBeam();
 
+//let playerOneScore = [obstacleOneMonkeyBars(), obstacleTwoHurdles(), obstacleThreeHulaHoop(), obstacleFourTireCourse(), obstacleFiveRopeClimb(), obstacleSixBalanceBeam()];
+//let playerTwoScore = [obstacleOneMonkeyBars(), obstacleTwoHurdles(), obstacleThreeHulaHoop(), obstacleFourTireCourse(), obstacleFiveRopeClimb(), obstacleSixBalanceBeam()];
 
-runGame();
+let playerTwoScore = 0;
+let playerOneScore = 0;
+
 
 function diceRoll(sides) {
 	let results = Math.floor(Math.random() * sides) + 1;
@@ -21,9 +25,8 @@ function diceRoll(sides) {
 }
 
 function runGame(){
-	while(true){
 
-	}
+	// while 
 
 	if(playerOneScore == 0) {
 		alert("The starting gun goes off and you head towards the first obstacle... monkey bars! To complete the monkey bars and move onto the next obstacle, you must roll an even number using a four-sided dice. Click OK to roll!");
@@ -104,22 +107,23 @@ function runGame(){
 }
 
 
+
 function obstacleOneMonkeyBars(player) {
 	let sides = 4;
 	let results = diceRoll(sides);
 	alert("You rolled "+results+"!")
 	if (results%2 == 0) {
-		alert("Congrats!" +player+ "You made it through the monkey bars! Continue to the hurdles.");
+		alert("Congrats" +player+ "You made it through the monkey bars! Continue to the hurdles.");
 		return true;
 	}
 	else if (results%2 != 0) {
-		alert("Oh no," +player+ "you slipped up and had to restart the obstacle! Try again.");
+		alert("Oh no, "+player +"you slipped up and had to restart the obstacle! Try again next round.");
 		return false;
 	}
 }
 
 
-function obstacleTwoHurdles(player) {
+function obstacleTwoHurdles() {
 	let sides = 6;
 	let results = diceRoll(sides);
 	alert("You rolled "+results+"!")
@@ -132,26 +136,26 @@ function obstacleTwoHurdles(player) {
 		return true;
 	}
 	else if (results<=2 == true) {
-		alert("Yikes, you hit a hurdle and had a total wipeout... try again!");
+		alert("Yikes, you hit a hurdle and had a total wipeout... try again next round!");
 		return false;
 	}
 }
 
 
-function obstacleThreeHulaHoop(player) {
+function obstacleThreeHulaHoop() {
 	let sides = 20;
 	let results = diceRoll(sides);
 	alert("You rolled "+results+"!")
 	if (results<=5 == true) {
-		alert("You really should practice hula hooping more... barely got it to stay up. Try again!");
+		alert("You really should practice hula hooping more... barely got it to stay up. Try again next round!");
 		return false;
 	}
 	else if (results>5 && results<=10 == true) {
-		alert("Hey, at least you kind of got it to stay off the ground! Try again and see if you can do it a little longer!");
+		alert("Hey, at least you kind of got it to stay off the ground! Try again and see if you can do it a little longer next time!");
 		return false;
 	}
 	else if (results>10 && results<=13 == true) {
-		alert("Oh so close! Try again!");
+		alert("Oh so close! Try again next time!");
 		return false;
 	}
 	else if (results>13 && results<=20 == true) {
@@ -161,16 +165,16 @@ function obstacleThreeHulaHoop(player) {
 }
 
 
-function obstacleFourTireCourse(player) {
+function obstacleFourTireCourse() {
 	let sides = 8;
 	let results = diceRoll(sides);
 	alert("You rolled "+results+"!")
 	if (results<=2 == true) {
-		alert("Face plant. Ouch, try again!");
+		alert("Face plant. Ouch, try again next round!");
 		return false;
 	}
 	else if (results>2 && results<=4 == true) {
-		alert("Oh, so close to passing! Give it another try!");
+		alert("Oh, so close to passing! Give it another try next round!");
 		return false;
 	}
 	else if (results>4 && results<=6) {
@@ -184,20 +188,20 @@ function obstacleFourTireCourse(player) {
 }
 
 
-function obstacleFiveRopeClimb(player) {
+function obstacleFiveRopeClimb() {
 	let sides = 10;
 	let results = diceRoll(sides);
 	alert("You rolled "+results+"!");
 	if (results<=2) {
-		alert("Get a grip! Try again.");
+		alert("Get a grip! Try again next time.");
 		return false;
 	}
 	else if (results>2 && results<=4) {
-		alert("Shake that rope burn off and try again!");
+		alert("Shake that rope burn off and try again next round!");
 		return false;
 	}
 	else if (results>4 && results<=5) {
-		alert("Oh so close! Your fingers grazed the string on the bell, but not enough to ring it. Give it another go!");
+		alert("Oh so close! Your fingers grazed the string on the bell, but not enough to ring it. Give it another go next round!");
 		return false;
 	}
 	else if (results>5 && results<= 8) {
@@ -211,12 +215,12 @@ function obstacleFiveRopeClimb(player) {
 }
 
 
-function obstacleSixBalanceBeam(player) {
+function obstacleSixBalanceBeam() {
 	let sides = 12;
 	let results = diceRoll(sides);
 	alert("You rolled "+results+"!");
 	if (results<=3) {
-		alert("Jeez, almost broke your ankle on that fall. Get back up and try again!");
+		alert("Jeez, almost broke your ankle on that fall. Get back up and try again next time!");
 		return false;
 	}
 	else if (results<3 && results<=8) {
