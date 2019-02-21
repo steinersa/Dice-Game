@@ -28,7 +28,7 @@ function runGame() {
 		}
 	}
 	if(playerOneScore == 1) {
-		alert("You approach the second obstacle... hurdles! To clear the hurdles and advance to the next obstacle, roll a number greater than 2 on a six-sided dice! CLick OK to roll.");
+		alert("You approach the second obstacle... hurdles! To clear the hurdles and advance to the next obstacle, roll a number greater than 2 on a six-sided dice! Click OK to roll.");
 		if (obstacleTwoHurdles(inputPlayerOne)) {
 			playerOneScore++;
 		}
@@ -40,7 +40,7 @@ function runGame() {
 		}
 	}
 	if(playerOneScore == 2) {
-		alert("You run to the hula hoop laying on the ground, the third obstacle. Hula hoop for as many seconds as you can! Roll higher than 13 on a 20-sided dice to advance to the next obstacle! CLick OK to roll.");
+		alert("You run to the hula hoop laying on the ground, the third obstacle. Hula hoop for as many seconds as you can! Roll higher than 13 on a 20-sided dice to advance to the next obstacle! Click OK to roll.");
 		if (obstacleThreeHulaHoop(inputPlayerOne)) {
 			playerOneScore++;
 		}
