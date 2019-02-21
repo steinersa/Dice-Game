@@ -16,7 +16,7 @@ function runGame() {
 	// while 
 
 	if(playerOneScore == 0) {
-		alert("The starting gun goes off and you head towards the first obstacle... monkey bars! To complete the monkey bars and move onto the next obstacle, you must roll an even number using a four-sided dice. Click OK to roll!");
+		alert("The starting gun goes off and you head towards the first obstacle... monkey bars! To complete the monkey bars and move onto the next obstacle, roll an even number using a four-sided dice. Click OK to roll!");
 		if(obstacleOneMonkeyBars(inputPlayerOne)){
 			playerOneScore++;
 		}
@@ -28,69 +28,68 @@ function runGame() {
 		}
 	}
 	if(playerOneScore == 1) {
-		alert("With the monkey bars behind you, you approach the hurdles! To clear the hurdles and advance to the next obstacle, roll a number greater than 2 on a six-sided dice!");
+		alert("You approach the second obstacle... hurdles! To clear the hurdles and advance to the next obstacle, roll a number greater than 2 on a six-sided dice! CLick OK to roll.");
 		if (obstacleTwoHurdles(inputPlayerOne)) {
 			playerOneScore++;
 		}
 	}
 	if(playerTwoScore == 1) {
-		alert("With the monkey bars behind you, you approach the hurdles! To clear the hurdles and advance to the next obstacle, roll a number greater than 2 on a six-sided dice!");
+		alert("You approach the second obstacle... hurdles! To clear the hurdles and advance to the next obstacle, roll a number greater than 2 on a six-sided dice! Click OK to roll.");
 		if (obstacleTwoHurdles(inputPlayerTwo)) {
 			playerTwoScore++;
 		}
 	}
 	if(playerOneScore == 2) {
-		alert("Phew, glad the hurdles are over! You run to the hula hoop laying on the ground ahead of you. Hula hoop for as many seconds as you can, roll higher than 13 on a 20-sided dice to advance to the next obstacle!");
+		alert("You run to the hula hoop laying on the ground, the third obstacle. Hula hoop for as many seconds as you can! Roll higher than 13 on a 20-sided dice to advance to the next obstacle! CLick OK to roll.");
 		if (obstacleThreeHulaHoop(inputPlayerOne)) {
 			playerOneScore++;
 		}
 	}
 	if(playerTwoScore == 2) {
-		alert("Phew, glad the hurdles are over! You run to the hula hoop laying on the ground ahead of you. Hula hoop for as many seconds as you can, roll higher than 13 on a 20-sided dice to advance to the next obstacle!");
+		alert("You run to the hula hoop laying on the ground, the third obstacle. Hula hoop for as many seconds as you can! Roll higher than 13 on a 20-sided dice to advance to the next obstacle! Click OK to roll.");
 		if (obstacleThreeHulaHoop(inputPlayerTwo)) {
 			playerTwoScore++;
 		}
 	}
 	if(playerOneScore == 3) {
-		alert("Now you're all warmed up for the tire course! Roll to navigate through the tires! Roll anything greater than a 4 on an eight-sided dice to advance to the next obstacle!");
+		alert("Now you're all warmed up for the tire course! Roll to navigate through the tires! Roll anything greater than a 4 on an eight-sided dice to advance to the next obstacle! Click OK to roll.");
 		if (obstacleFourTireCourse(inputPlayerOne)) {
 			playerOneScore++;
 		}
 	}
-
 	if(playerTwoScore == 3) {
-		alert("Now you're all warmed up for the tire course! Roll to navigate through the tires! Roll anything greater than a 4 on an eight-sided dice to advance to the next obstacle!");
+		alert("Now you're all warmed up for the tire course! Roll to navigate through the tires! Roll anything greater than a 4 on an eight-sided dice to advance to the next obstacle! Click OK to roll.");
 		if (obstacleFourTireCourse(inputPlayerTwo)) {
 			playerTwoScore++;
 		}
 	}
 	if(playerOneScore == 4) {
-		alert("It's quite daunting looking up at the bell you need to ring at the top of the rope. But don't worry, you can do it! All you have to do is roll greater than 5 on a ten-sided dice.");
+		alert("You're at the fifth obstacle... the rope climb! It's quite daunting looking up at the bell you need to ring at the top of the rope. But don't worry, you can do it! All you have to do is roll greater than 5 on a ten-sided dice. Click OK to roll.");
 		if (obstacleFiveRopeClimb(inputPlayerOne)) {
 			playerOneScore++;
 		}
 	}
 	if(playerTwoScore == 4) {
-		alert("It's quite daunting looking up at the bell you need to ring at the top of the rope. But don't worry, you can do it! All you have to do is roll greater than 5 on a ten-sided dice.");
+		alert("You're at the fifth obstacle... the rope climb! It's quite daunting looking up at the bell you need to ring at the top of the rope. But don't worry, you can do it! All you have to do is roll greater than 5 on a ten-sided dice. Click OK to roll.");
 		if (obstacleFiveRopeClimb(inputPlayerTwo)) {
 			playerTwoScore++;
 		}
 	}
 	if(playerOneScore == 5) {
-		alert("Yay! You made it to the final obstacle. All you have to do is successfully walk across the beam. To do this, roll greater than 8 on a twelve-sided dice.");
+		alert("Yay! You made it to the final obstacle. All you have to do is successfully walk across the balance beam. To do this, roll greater than 8 on a twelve-sided dice. Click OK to roll.");
 		if (obstacleSixBalanceBeam(inputPlayerOne)) {
 			playerOneScore++;
 		}
 	}
 	if(playerTwoScore == 5) {
-		alert("Yay! You made it to the final obstacle. All you have to do is successfully walk across the beam. To do this, roll greater than 8 on a twelve-sided dice.");
+		alert("Yay! You made it to the final obstacle. All you have to do is successfully walk across the balance beam. To do this, roll greater than 8 on a twelve-sided dice. Click OK to roll.");
 		if (obstacleSixBalanceBeam(inputPlayerTwo)) {
 			playerTwoScore++;
 		}
 	}
 	else {
 		runGame();
-	}
+	}  
 }
 
 
@@ -115,11 +114,11 @@ function obstacleTwoHurdles(player) {
 	let results = diceRoll(sides);
 	alert("You rolled "+results+"!")
 	if (results>4 == true) {
-		alert("Yay, " +player+ "! All hurdles were cleared! Next obstacle!");
+		alert("Yay, " +player+ "! All hurdles were cleared! Next obstacle... the Hula Hoop!");
 		return true;
 	}
 	else if (results<=4 && results>2 == true) {
-		alert("Your foot caught a hurdle which caused you to stumble a bit, but not too shabby, " +player+ "! Onto the next obstacle!");
+		alert("Not too shabby, " +player+ "! Onto the hula hoop next!");
 		return true;
 	}
 	else if (results<=2 == true) {
@@ -134,11 +133,11 @@ function obstacleThreeHulaHoop(player) {
 	let results = diceRoll(sides);
 	alert("You rolled "+results+"!")
 	if (results<=5 == true) {
-		alert("You really should practice hula hooping more," +player+ " ... barely got it to stay up. Try again next round!");
+		alert("You really should practice hula hooping more, " +player+ " ... barely got it to stay up. Try again next round!");
 		return false;
 	}
 	else if (results>5 && results<=10 == true) {
-		alert("Hey, " +player+ ", at least you kind of got it to stay off the ground! Try again and see if you can do it a little longer next time!");
+		alert("Hey, " +player+ ", try again next round and see if you can do it a little longer!");
 		return false;
 	}
 	else if (results>10 && results<=13 == true) {
@@ -175,10 +174,10 @@ function obstacleFourTireCourse(player) {
 }
 
 
-function obstacleFiveRopeClimb() {
+function obstacleFiveRopeClimb(player) {
 	let sides = 10;
 	let results = diceRoll(sides);
-	alert("You rolled "+results+"!");
+	alert("You rolled "+results+"!")
 	if (results<=2) {
 		alert("Get a grip, " +player+ "! Try again next time.");
 		return false;
@@ -202,10 +201,10 @@ function obstacleFiveRopeClimb() {
 }
 
 
-function obstacleSixBalanceBeam() {
+function obstacleSixBalanceBeam(player) {
 	let sides = 12;
 	let results = diceRoll(sides);
-	alert("You rolled "+results+"!");
+	alert("You rolled "+results+"!")
 	if (results<=3) {
 		alert("Jeez, " +player+ ". Almost broke your ankle on that fall. Get back up and try again next time!");
 		return false;
